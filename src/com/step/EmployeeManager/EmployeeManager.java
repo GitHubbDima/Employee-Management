@@ -1,15 +1,16 @@
 package com.step.EmployeeManager;
 
-import com.step.EmployeeManager.Employ.Employ;
+import com.step.EmployeeManager.Employee.Employee;
 import com.step.EmployeeManager.Menus.Menus;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class EmployeeManager {
 
     Menus menu = new Menus();
-    Employ employ = new Employ();
-    List<Employ> listEmployes = new ArrayList<>();
+    Employee employee = new Employee(LocalDate.now(),LocalDate.of(2000,01,01));
+    List<Employee> listEmployes = new ArrayList<>();
 
     public void employeeManagement(){
         boolean exit = false;
@@ -19,8 +20,8 @@ public class EmployeeManager {
             String resultMainMenu = menu.mainMenu();
 
             if (resultMainMenu.equals("Employ")){
-                result_employeeRegistration = employ.employeeRegistration();
-                listEmployes.add(employ);
+                result_employeeRegistration = employee.employeeRegistration();
+                listEmployes.add(employee);
             }else if(resultMainMenu.equals("Dismissal")){
                 menu.dismissalMenu();
             }else if(resultMainMenu.equals("Exit")){

@@ -1,10 +1,6 @@
 package com.step.EmployeeManager.Menus;
 
-import com.step.EmployeeManager.Employ.Employ;
-
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Menus {
