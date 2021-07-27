@@ -1,12 +1,10 @@
 package com.step.EmployeeManager.AbstractClassEmployeeManager;
 
-import com.step.EmployeeManager.EmployeeManager;
-
 public abstract class AbstractClassEmployeeManager {
 
     private int id ;
     private String firstName;
-    private String lastName;
+    private String surName;
     private String idnp;
     private String department;
     private String function;
@@ -16,8 +14,8 @@ public abstract class AbstractClassEmployeeManager {
         this.firstName = firstName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSurName(String surName) {
+        this.surName = surName;
     }
 
     public void setIdnp(String idnp) {
@@ -40,8 +38,8 @@ public abstract class AbstractClassEmployeeManager {
         return firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getSurName() {
+        return surName;
     }
 
     public String getIdnp() {

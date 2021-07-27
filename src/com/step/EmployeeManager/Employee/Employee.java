@@ -14,6 +14,12 @@ public class Employee extends AbstractClassEmployeeManager {
     Scanner in = new Scanner(System.in);
     List<Employee> employeeList = new ArrayList<>();
 
+    public Employee(int id, String firstname, String surname){
+        super.setId(id);
+        super.setFirstName(firstname);
+        super.setSurName(surname);
+    }
+
     public Employee(LocalDate employeedOn, LocalDate birthdate){
         this.employeedOn = employeedOn;
         this.birthdate = birthdate;
@@ -36,7 +42,7 @@ public class Employee extends AbstractClassEmployeeManager {
 
             System.out.println("\t employment MENU \t");
             System.out.print(" Enter firstname: "); employee.setFirstName(in.next());
-            System.out.print(" Enter lastname: "); employee.setLastName(in.next());
+            System.out.print(" Enter lastname: "); employee.setSurName(in.next());
             System.out.print(" Enter idnp: "); employee.setIdnp(in.next());
             System.out.print(" Enter departament: "); employee.setDepartment(in.next());
             System.out.print(" Enter function: "); employee.setFunction(in.next());
@@ -61,5 +67,10 @@ public class Employee extends AbstractClassEmployeeManager {
             }
         }
         return nextEmployment;
+    }
+
+    @Override
+        public String toString(){
+            return "id:" + super.getId() + ", firstname:" + super.getFirstName() + ", surname:" + super.getSurName();
     }
 }
